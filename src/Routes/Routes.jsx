@@ -5,7 +5,7 @@ import AddToy from "../pages/AddToy";
 import AllToy from "../pages/AllToy";
 import Error404 from "../pages/Error404";
 import Blogs from "../pages/Home/Blogs";
-import Details from "../pages/Home/Details";
+import CatagoryDetails from "../pages/Home/CatagoryDetails";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login";
 import MyToy from "../pages/MyToy";
@@ -46,8 +46,8 @@ const router = createBrowserRouter([
         element: <MyToy></MyToy>,
       },
       {
-        path: "/catagoryDetails",
-        element: <Details></Details>,
+        path: "/catagoryDetails/:id",
+        element: <CatagoryDetails></CatagoryDetails>,
       },
     ],
   },
