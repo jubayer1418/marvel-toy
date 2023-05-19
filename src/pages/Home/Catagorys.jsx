@@ -10,17 +10,17 @@ import trans2 from "../../assets/image/catagory/trans2.jpg";
 const Catagorys = () => {
   return (
     <div className="py-20">
-      <div className="divider text-3xl font-bold text-green-500 ">
+      <div className="divider text-3xl font-bold text-green-500 py-10 ">
         Catagory Section
       </div>
-      <Tabs>
+      <Tabs className="text-center">
         <TabList>
           <Tab>Star wars</Tab>
           <Tab>Marvel</Tab>
           <Tab>Transformers</Tab>
         </TabList>
 
-        <TabPanel>
+        <TabPanel className="flex justify-center">
           <div className="flex gap-5">
             <div className="card w-96 bg-base-100 shadow-xl">
               <figure className="px-10 pt-10">
@@ -31,7 +31,34 @@ const Catagorys = () => {
                   Star Wars The Black Series Darth Malgus 6-Inch Action Figure
                 </h2>
                 <div className="flex justify-between w-full text-green-400 text-xl pb-4">
-                  <h1>Rating: 4.6</h1>
+                  <div className="rating">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-orange-400"
+                    />
+                  </div>
                   <h1>price: $ 30</h1>
                 </div>
                 <div className="card-actions">
