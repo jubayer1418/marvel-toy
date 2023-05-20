@@ -5,11 +5,11 @@ const Blogs = () => {
       <div>
         <div className="collapse">
           <input type="checkbox" className="peer" />
-          <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+          <div className="collapse-title bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
             What is an access token and refresh token? How do they work and
             where should we store them on the client-side?
           </div>
-          <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+          <div className="collapse-content bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
             <p>
               {" "}
               An access token and refresh token are commonly used in
@@ -32,10 +32,10 @@ const Blogs = () => {
       </div>
       <div className="collapse">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-title bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           Compare SQL and NoSQL databases?
         </div>
-        <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-content bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           <p>
             SQL databases are vertically scalable, while NoSQL databases are
             horizontally scalable. SQL databases are table-based, while NoSQL
@@ -47,10 +47,10 @@ const Blogs = () => {
       </div>
       <div className="collapse">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-title bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           What is express js? What is Nest JS?
         </div>
-        <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-content bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           <p>
             NestJS provides a more structured and opinionated approach, which
             can make it easier to build complex APIs with proper separation of
@@ -62,10 +62,10 @@ const Blogs = () => {
       </div>
       <div className="collapse">
         <input type="checkbox" className="peer" />
-        <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-title bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           What is MongoDB aggregate and how does it work ?
         </div>
-        <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+        <div className="collapse-content bg-success text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           <p>
             What is Aggregation in MongoDB? Aggregation is a way of processing a
             large number of documents in a collection by means of passing them
