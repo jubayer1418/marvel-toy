@@ -2,25 +2,45 @@ import { useEffect, useState } from "react";
 import AllToysRow from "./AllToysRow";
 
 const AllToy = () => {
+  const [name, setName] = useState("");
+
+  console.log(name);
   const [allToys, setAllToys] = useState([]);
-  useEffect(() => {
-    fetch("https://assinment-11-server-tau.vercel.app/allToys", {
-      method: "GET",
-    })
+  const handleSearch = () => {
+    fetch(`https://assinment-11-server-tau.vercel.app/toysearch/${name}`)
       .then((res) => res.json())
       .then((result) => {
         setAllToys(result);
       });
-  }, []);
+  };
+  useEffect(() => {
+    fetch(`https://assinment-11-server-tau.vercel.app/allToys`)
+      .then((res) => res.json())
+      .then((result) => {
+        setAllToys(result);
+      });
+  }, [name]);
   return (
     <div className="overflow-x-auto">
-      <table className="table w-full">
+      <div className="text-center my-5">
+        <input
+          type="text"
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Type here"
+          className="input input-bordered input-success w-full max-w-xs"
+        />
+        <button onClick={handleSearch} className="btn btn-success ml-5">
+          Success
+        </button>
+      </div>
+
+      <table className="table w-full mx-auto">
         {/* head*/}
         <thead>
           <tr>
             <th>No</th>
             <th>Seller Name</th>
-            <th>Name</th>
+            <th>Toy Name</th>
             <th>Sub-category</th>
             <th>Available Quantity</th>
             <th>Price</th>

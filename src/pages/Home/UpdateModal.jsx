@@ -3,24 +3,11 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../prividers/AuthProvider";
 
 const UpdateModal = (props) => {
-  const {
-    _id,
-    img,
-    description,
-    quantity,
-    rating,
-    price,
-    category,
-    email,
-    sellerName,
-    name,
-  } = props.toy;
+  const { _id, img, description, quantity, rating, price, name } = props.toy;
   const { user } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
-    // eslint-disable-next-line no-unused-vars
-    watch,
     formState: { errors },
   } = useForm();
   const { handleJobUpdate } = props;
@@ -126,7 +113,7 @@ const UpdateModal = (props) => {
 
               <input
                 className="btn btn-success w-full"
-                value="Add Toy"
+                value="Update Toy"
                 type="submit"
               />
             </form>

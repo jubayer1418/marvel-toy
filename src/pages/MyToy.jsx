@@ -45,7 +45,6 @@ const MyToy = () => {
   };
   return (
     <div className="overflow-x-auto">
-      <h1>{allToys.length}</h1>
       <table className="table w-full">
         {/* head*/}
         <thead>
