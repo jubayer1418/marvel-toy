@@ -20,7 +20,6 @@ const CategoryCard = ({ category }) => {
               type="radio"
               name="rating-5"
               className="mask mask-star-2 bg-green-400"
-              checked
             />
             <input
               type="radio"

@@ -8,7 +8,7 @@ const Catagorys = () => {
     fetch("https://assinment-11-server-tau.vercel.app/catagories")
       .then((res) => res.json())
       .then((data) => setCategory(data));
-  }, [categories]);
+  }, []);
   return (
     <div className="py-20 shadow-2xl my-10">
       <div className="divider text-3xl font-bold text-green-500 py-10 ">
