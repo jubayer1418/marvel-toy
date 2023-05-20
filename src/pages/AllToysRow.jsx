@@ -1,10 +1,12 @@
 import { useLocation } from "react-router-dom";
+import UpdateModal from "./Home/UpdateModal";
 
-const AllToysRow = ({ toy, index }) => {
+const AllToysRow = ({ toy, index, handleDelete, handleJobUpdate }) => {
   const location = useLocation();
   console.log(location.pathname);
   const loca = location.pathname;
   const {
+    _id,
     img,
     description,
     quantity,
@@ -15,6 +17,7 @@ const AllToysRow = ({ toy, index }) => {
     sellerName,
     name,
   } = toy;
+
   return (
     <tr>
       <th>{index + 1}</th>
@@ -23,11 +26,23 @@ const AllToysRow = ({ toy, index }) => {
       <td>{category}</td>
       <td>{quantity}</td>
       <td>{price}</td>
+
       <th>
         {loca == "/myToy" ? (
           <>
-            <button className="btn btn-error mr-5">Delete</button>
-            <button className="btn btn-success">Update</button>
+            <button
+              onClick={() => handleDelete(_id)}
+              className="btn btn-error mr-5"
+            >
+              Delete
+            </button>
+            <label htmlFor="my-modal-3" className="btn btn-success">
+              Update
+            </label>
+            <UpdateModal
+              handleJobUpdate={handleJobUpdate}
+              toy={toy}
+            ></UpdateModal>
           </>
         ) : (
           <button className="btn btn-success mr-5">View Details</button>

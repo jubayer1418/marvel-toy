@@ -5,6 +5,7 @@ import AllToysRow from "./AllToysRow";
 const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [allToys, setAllToys] = useState([]);
+  const [control, setControl] = useState(false);
   console.log(allToys);
   const url = `https://assinment-11-server-tau.vercel.app/allToys?email=${user?.email}`;
   useEffect(() => {
@@ -14,7 +15,34 @@ const MyToy = () => {
         setAllToys(result);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  }, [user, control]);
+  const handleJobUpdate = (data) => {
+    console.log(data);
+    fetch(`https://assinment-11-server-tau.vercel.app/allToys/${data._id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          setControl(!control);
+        }
+        console.log(result);
+      });
+  };
+
+  const handleDelete = (id) => {
+    fetch(`https://assinment-11-server-tau.vercel.app/allToys/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.deletedCount > 0) {
+          setControl(!control);
+        }
+      });
+  };
   return (
     <div className="overflow-x-auto">
       <h1>{allToys.length}</h1>
@@ -32,7 +60,13 @@ const MyToy = () => {
         </thead>
         <tbody>
           {allToys.map((toy, index) => (
-            <AllToysRow key={toy._id} toy={toy} index={index}></AllToysRow>
+            <AllToysRow
+              key={toy._id}
+              toy={toy}
+              index={index}
+              handleDelete={handleDelete}
+              handleJobUpdate={handleJobUpdate}
+            ></AllToysRow>
           ))}
         </tbody>
       </table>
