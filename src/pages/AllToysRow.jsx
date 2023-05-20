@@ -1,22 +1,11 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import UpdateModal from "./Home/UpdateModal";
 
 const AllToysRow = ({ toy, index, handleDelete, handleJobUpdate }) => {
   const location = useLocation();
   console.log(location.pathname);
   const loca = location.pathname;
-  const {
-    _id,
-    img,
-    description,
-    quantity,
-    rating,
-    price,
-    category,
-    email,
-    sellerName,
-    name,
-  } = toy;
+  const { _id, quantity, price, category, sellerName, name } = toy;
 
   return (
     <tr>
@@ -45,7 +34,9 @@ const AllToysRow = ({ toy, index, handleDelete, handleJobUpdate }) => {
             ></UpdateModal>
           </>
         ) : (
-          <button className="btn btn-success mr-5">View Details</button>
+          <Link to={`/viewDetails/${_id}`} className="btn btn-success mr-5">
+            View Details
+          </Link>
         )}
       </th>
     </tr>

@@ -10,6 +10,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login";
 import MyToy from "../pages/MyToy";
 import SingUP from "../pages/SingUp";
+import ViewDetails from "../pages/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/catagoryDetails/:id",
         element: <CatagoryDetails></CatagoryDetails>,
+      },
+      {
+        path: "/viewDetails/:id",
+        element: <ViewDetails></ViewDetails>,
       },
     ],
   },
