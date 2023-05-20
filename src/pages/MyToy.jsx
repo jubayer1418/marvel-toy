@@ -33,7 +33,7 @@ const MyToy = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`https://assinment-11-server-tau.vercel.app/allToys/${id}`, {
+    fetch(`https://assinment-11-server-tau.vercel.app/allToys`, {
       method: "DELETE",
     })
       .then((res) => res.json())
