@@ -2,13 +2,15 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../prividers/AuthProvider";
 
 const Login = () => {
   const [error, setError] = useState("");
   const { SingIn } = useContext(AuthContext);
-
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -18,8 +20,8 @@ const Login = () => {
     SingIn(email, password)
       .then((result) => {
         const loguser = result.user;
-        setError("");
-        form.reset();
+        console.log(loguser);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const err = error.message;

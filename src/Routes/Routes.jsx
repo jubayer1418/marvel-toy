@@ -11,6 +11,7 @@ import Login from "../pages/Login";
 import MyToy from "../pages/MyToy";
 import SingUP from "../pages/SingUp";
 import ViewDetails from "../pages/ViewDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/viewDetails/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
       },
     ],
   },
