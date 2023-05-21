@@ -11,9 +11,8 @@ const CatagoryDetails = () => {
     fetch(`https://assinment-11-server-tau.vercel.app/catagories/${params.id}`)
       .then((res) => res.json())
       .then((data) => setCategory(data));
-  }, []);
-  const { Picture, Name, Price, Rating, Category, description, _id } =
-    categories;
+  }, [params]);
+  const { Picture, Name, Price, description } = categories;
   return (
     <div className="card card-side bg-base-100 shadow-xl w-[70%] mx-auto">
       <figure className="w-full">
