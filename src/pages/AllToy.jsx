@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import Tittle from "../utilities/Tittle";
 import AllToysRow from "./AllToysRow";
 
 const AllToy = () => {
+  Tittle("All Toys");
   const [name, setName] = useState("");
 
   console.log(name);

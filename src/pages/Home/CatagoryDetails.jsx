@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Tittle from "../../utilities/Tittle";
 
 const CatagoryDetails = () => {
+  Tittle("Category Details");
   const params = useParams();
   console.log(params.id);
   const [categories, setCategory] = useState([]);

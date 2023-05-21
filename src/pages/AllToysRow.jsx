@@ -1,7 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
+import Tittle from "../utilities/Tittle";
 import UpdateModal from "./Home/UpdateModal";
 
 const AllToysRow = ({ toy, index, handleDelete, handleJobUpdate }) => {
+  Tittle("View Details");
   const location = useLocation();
   console.log(location.pathname);
   const loca = location.pathname;

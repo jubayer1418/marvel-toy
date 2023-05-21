@@ -1,5 +1,8 @@
+import Tittle from "../../utilities/Tittle";
+
 /* eslint-disable react/no-unescaped-entities */
 const Blogs = () => {
+  Tittle("Blogs");
   return (
     <>
       <div>

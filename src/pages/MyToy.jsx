@@ -2,8 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../prividers/AuthProvider";
+import Tittle from "../utilities/Tittle";
 import AllToysRow from "./AllToysRow";
 const MyToy = () => {
+  Tittle("My Toys");
   const { user } = useContext(AuthContext);
   const [allToys, setAllToys] = useState([]);
   const [control, setControl] = useState(false);

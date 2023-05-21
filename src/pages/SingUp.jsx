@@ -4,7 +4,9 @@ import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../prividers/AuthProvider";
+import Tittle from "../utilities/Tittle";
 const SingUP = () => {
+  Tittle("Register");
   const { Register, handlegoogle } = useContext(AuthContext);
 
   const handleRegister = (event) => {
