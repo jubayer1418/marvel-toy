@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/image/banner/logo.webp";
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 bg-[#D1D5DB] text-primary-content">
+    <footer
+      data-aos="zoom-out-up"
+      data-aos-duration="2000"
+      className="footer footer-center p-10 bg-[#D1D5DB] text-primary-content"
+    >
       <div className="text-black">
         <Link to={"/"}>
           <img className="h-20" src={logo} alt="" />

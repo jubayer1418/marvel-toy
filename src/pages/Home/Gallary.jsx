@@ -12,24 +12,58 @@ const Gallary = () => {
         Gellary Section
       </div>
       <div className="grid gap-4 shadow-xl">
-        <div className="shadow-2xl">
+        <div
+          data-aos="zoom-in-down"
+          data-aos-duration="3000"
+          className="shadow-2xl"
+        >
           <img className="h-auto max-w-full rounded-lg" src={img1} alt="" />
         </div>
         <div className="grid md:grid-cols-5 gap-4">
           <div className="shadow-2xl">
-            <img className="h-auto max-w-full rounded-lg" src={img2} alt="" />
+            <img
+              data-aos="flip-right"
+              data-aos-duration="2000"
+              className="h-auto max-w-full rounded-lg"
+              src={img2}
+              alt=""
+            />
           </div>
           <div className="shadow-2xl">
-            <img className="h-auto max-w-full rounded-lg" src={img3} alt="" />
+            <img
+              data-aos="flip-right"
+              data-aos-duration="2000"
+              className="h-auto max-w-full rounded-lg"
+              src={img3}
+              alt=""
+            />
           </div>
           <div className="shadow-2xl">
-            <img className="h-auto max-w-full rounded-lg" src={img4} alt="" />
+            <img
+              data-aos="flip-right"
+              data-aos-duration="2000"
+              className="h-auto max-w-full rounded-lg"
+              src={img4}
+              alt=""
+            />
           </div>
           <div className="shadow-2xl">
-            <img className="h-auto max-w-full rounded-lg" src={img5} alt="" />
+            <img
+              data-aos="flip-right"
+              data-aos-duration="2000"
+              className="h-auto max-w-full rounded-lg"
+              src={img5}
+              alt=""
+            />
           </div>
           <div className="shadow-2xl">
-            <img className="h-auto max-w-full rounded-lg" src={img6} alt="" />
+            <img
+              data-aos="flip-right"
+              data-aos-duration="3000"
+              className="h-auto max-w-full rounded-lg"
+              src={img6}
+              alt=""
+            />
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ const Catagorys = () => {
       <div className="divider text-3xl font-bold text-green-500 py-10 ">
         Catagory Section
       </div>
-      <Tabs className="text-center">
+      <Tabs data-aos="fade-up" data-aos-duration="3000" className="text-center">
         <TabList>
           <Tab>Star wars</Tab>
           <Tab>Marvel</Tab>
