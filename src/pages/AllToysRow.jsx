@@ -1,29 +1,14 @@
-import { Link, useLocation } from "react-router-dom";
-import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import Tittle from "../utilities/Tittle";
-import UpdateModal from "./Home/UpdateModal";
-const AllToysRow = ({ toy, index, handleDelete, control, setControl }) => {
+const AllToysRow = ({ toy, index }) => {
   Tittle("View Details");
-  const location = useLocation();
-  // console.log(location.pathname);
-  const loca = location.pathname;
-  const { _id, quantity, price, category, sellerName, name } = toy;
 
-  const handleJobUpdate = (data) => {
-    fetch(`https://assinment-11-server-tau.vercel.app/allToys/${_id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result.modifiedCount > 0) {
-          setControl(!control);
-          toast("Toy Update");
-        }
-      });
-  };
+  // console.log(location.pathname);
+
+  const { _id, quantity, price, category, sellerName, name } = toy;
+  console.log(toy);
+
   return (
     <tr>
       <th>{index + 1}</th>
@@ -34,27 +19,9 @@ const AllToysRow = ({ toy, index, handleDelete, control, setControl }) => {
       <td>{price}</td>
 
       <th>
-        {loca == "/myToy" ? (
-          <>
-            <button
-              onClick={() => handleDelete(_id)}
-              className="btn btn-error mr-5"
-            >
-              Delete
-            </button>
-            <label htmlFor="my-modal-3" className="btn btn-success">
-              Update
-            </label>
-            <UpdateModal
-              handleJobUpdate={handleJobUpdate}
-              toy={toy}
-            ></UpdateModal>
-          </>
-        ) : (
-          <Link to={`/viewDetails/${_id}`} className="btn btn-success mr-5">
-            View Details
-          </Link>
-        )}
+        <Link to={`/viewDetails/${_id}`} className="btn btn-success mr-5">
+          View Details
+        </Link>
       </th>
     </tr>
   );
