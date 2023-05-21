@@ -9,10 +9,9 @@ const AllToysRow = ({ toy, index, handleDelete, control, setControl }) => {
   // console.log(location.pathname);
   const loca = location.pathname;
   const { _id, quantity, price, category, sellerName, name } = toy;
-  console.log(_id);
+
   const handleJobUpdate = (data) => {
-    console.log(data);
-    fetch(`https://assinment-11-server-tau.vercel.app/allToys/${data._id}`, {
+    fetch(`https://assinment-11-server-tau.vercel.app/allToys/${_id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -23,7 +22,6 @@ const AllToysRow = ({ toy, index, handleDelete, control, setControl }) => {
           setControl(!control);
           toast("Toy Update");
         }
-        console.log(result);
       });
   };
   return (

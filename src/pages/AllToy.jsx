@@ -28,11 +28,11 @@ const AllToy = () => {
         <input
           type="text"
           onChange={(e) => setName(e.target.value)}
-          placeholder="Type here"
+          placeholder="Please enter toy name"
           className="input input-bordered input-success w-full max-w-xs"
         />
         <button onClick={handleSearch} className="btn btn-success ml-5">
-          Success
+          Search
         </button>
       </div>
 

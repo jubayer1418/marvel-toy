@@ -7,7 +7,7 @@ import AllToysRow from "./AllToysRow";
 
 const MyToy = () => {
   const [selected, setSelected] = useState("Price-Ascending");
-  console.log(typeof selected);
+
   Tittle("My Toys");
   const { user } = useContext(AuthContext);
   const [allToys, setAllToys] = useState([]);
