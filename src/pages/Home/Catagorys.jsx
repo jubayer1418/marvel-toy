@@ -21,8 +21,8 @@ const Catagorys = () => {
           <Tab>Transformers</Tab>
         </TabList>
 
-        <TabPanel className="flex justify-center">
-          <div className="flex gap-5">
+        <TabPanel className="md:flex justify-center">
+          <div className="md:flex gap-5">
             {categories.slice(0, 2).map((category) => (
               <CategoryCard
                 key={category._id}
@@ -31,8 +31,8 @@ const Catagorys = () => {
             ))}
           </div>
         </TabPanel>
-        <TabPanel className="flex justify-center">
-          <div className="flex gap-5">
+        <TabPanel className="md:flex justify-center">
+          <div className="md:flex gap-5">
             {categories.slice(2, 4).map((category) => (
               <CategoryCard
                 key={category._id}
@@ -41,8 +41,8 @@ const Catagorys = () => {
             ))}
           </div>
         </TabPanel>
-        <TabPanel className="flex justify-center">
-          <div className="flex gap-5">
+        <TabPanel className="md:flex justify-center">
+          <div className="md:flex gap-5">
             {categories.slice(4, 6).map((category) => (
               <CategoryCard
                 key={category._id}

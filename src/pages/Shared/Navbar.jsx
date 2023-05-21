@@ -97,6 +97,19 @@ const Navbar = () => {
                 All Toys
               </NavLink>
             </li>
+            {user ? (
+              <Link
+                onClick={handelLogout}
+                to={"register"}
+                className="btn btn-success"
+              >
+                Logout
+              </Link>
+            ) : (
+              <Link to={"login"} className="btn btn-success">
+                Login
+              </Link>
+            )}
           </ul>
         </div>
         <Link to={"/"} className="btn btn-ghost normal-case text-xl h-28">
@@ -173,7 +186,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end hidden md:contents">
         {user ? (
           <Link
             onClick={handelLogout}

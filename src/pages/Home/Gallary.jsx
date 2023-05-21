@@ -15,7 +15,7 @@ const Gallary = () => {
         <div className="shadow-2xl">
           <img className="h-auto max-w-full rounded-lg" src={img1} alt="" />
         </div>
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid md:grid-cols-5 gap-4">
           <div className="shadow-2xl">
             <img className="h-auto max-w-full rounded-lg" src={img2} alt="" />
           </div>

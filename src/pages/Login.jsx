@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <>
       <div className="hero  bg-base-200">
-        <div className="hero-content  lg:flex">
+        <div className="hero-content md:flex">
           <iframe
             className="h-96 "
             src="https://embed.lottiefiles.com/animation/119048"
