@@ -5,7 +5,8 @@ import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../prividers/AuthProvider";
 const SingUP = () => {
-  const { Register } = useContext(AuthContext);
+  const { Register, handlegoogle } = useContext(AuthContext);
+
   const handleRegister = (event) => {
     event.preventDefault();
 
@@ -118,7 +119,10 @@ const SingUP = () => {
         </div>
       </div>
       <div className="text-center py-5">
-        <button className=" btn btn-outline btn-success ">
+        <button
+          onClick={() => handlegoogle()}
+          className=" btn btn-outline btn-success "
+        >
           <FaGoogle className="text-5xl pr-3"></FaGoogle>
           <span className="text-2xl"> Google</span>
         </button>

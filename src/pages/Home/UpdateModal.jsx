@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../../prividers/AuthProvider";
 
+import { AuthContext } from "../../prividers/AuthProvider";
 const UpdateModal = (props) => {
   const { _id, img, description, quantity, rating, price, name } = props.toy;
   const { user } = useContext(AuthContext);

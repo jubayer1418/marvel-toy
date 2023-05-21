@@ -1,3 +1,5 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Banner from "./Banner";
 import Catagorys from "./Catagorys";
 import Delivary from "./Delivary";
@@ -12,6 +14,7 @@ const Home = () => {
       <Catagorys></Catagorys>
       <Statistic></Statistic>
       <Delivary></Delivary>
+      <ToastContainer />
     </div>
   );
 };

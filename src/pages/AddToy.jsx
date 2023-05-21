@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../prividers/AuthProvider";
 const AddToy = () => {
   const { user } = useContext(AuthContext);
@@ -21,8 +23,10 @@ const AddToy = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
+          toast("Add a Toy ");
           e.target.reset();
         }
+        console.log(result);
       });
   };
 
@@ -108,6 +112,7 @@ const AddToy = () => {
           value="Add Toy"
           type="submit"
         />
+        <ToastContainer />
       </form>
     </div>
   );

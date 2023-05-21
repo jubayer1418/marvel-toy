@@ -7,10 +7,13 @@ import { AuthContext } from "../prividers/AuthProvider";
 
 const Login = () => {
   const [error, setError] = useState("");
-  const { SingIn } = useContext(AuthContext);
+  const { SingIn, handlegoogle } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
+  const handleGoogle = () => {
+    handlegoogle();
+  };
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -88,7 +91,10 @@ const Login = () => {
         </div>
       </div>
       <div className="text-center py-5">
-        <button className=" btn btn-outline btn-success ">
+        <button
+          onClick={handleGoogle}
+          className=" btn btn-outline btn-success "
+        >
           <FaGoogle className="text-5xl pr-3"></FaGoogle>
           <span className="text-2xl"> Google</span>
         </button>

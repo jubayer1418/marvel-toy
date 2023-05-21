@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../prividers/AuthProvider";
 import AllToysRow from "./AllToysRow";
-
 const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [allToys, setAllToys] = useState([]);
@@ -27,6 +28,7 @@ const MyToy = () => {
       .then((result) => {
         if (result.modifiedCount > 0) {
           setControl(!control);
+          toast("Toy Update");
         }
         console.log(result);
       });
@@ -40,6 +42,7 @@ const MyToy = () => {
       .then((result) => {
         if (result.deletedCount > 0) {
           setControl(!control);
+          toast("Toy Deleted");
         }
       });
   };
@@ -67,6 +70,7 @@ const MyToy = () => {
               handleJobUpdate={handleJobUpdate}
             ></AllToysRow>
           ))}
+          <ToastContainer />
         </tbody>
       </table>
     </div>
